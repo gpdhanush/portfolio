@@ -55,21 +55,27 @@ const ExperienceSection = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline Line */}
+          {/* Timeline Line - Desktop */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block" />
+          
+          {/* Timeline Line - Mobile */}
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent md:hidden" />
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.company}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative md:w-1/2 ${
+                className={`relative pl-10 md:pl-0 md:w-1/2 ${
                   index % 2 === 0 ? "md:pr-12" : "md:ml-auto md:pl-12"
                 }`}
               >
-                {/* Timeline Dot */}
+                {/* Timeline Dot - Mobile */}
+                <div className="absolute left-2 top-6 w-4 h-4 bg-primary rounded-full ring-4 ring-background md:hidden" />
+                
+                {/* Timeline Dot - Desktop */}
                 <div
                   className={`absolute hidden md:block top-6 ${
                     index % 2 === 0 ? "right-0 translate-x-1/2" : "left-0 -translate-x-1/2"
