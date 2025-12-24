@@ -35,7 +35,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 px-4"
           >
             Gnana Prakasam
           </motion.h1>
@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient mb-6"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient mb-6 px-4"
           >
             Senior Flutter & Front-End Developer
           </motion.h2>
@@ -55,7 +55,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-4"
           >
             5.5+ years of experience building scalable mobile and web applications. 
             Specializing in Flutter, Angular, and modern frontend technologies.
@@ -66,15 +66,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
           >
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
               <a href="/resume.pdf" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
+            <Button variant="heroOutline" size="lg" className="w-full sm:w-auto" asChild>
               <a href="#contact">
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
@@ -87,7 +87,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-16 flex flex-wrap justify-center gap-3"
+            className="mt-10 sm:mt-16 flex flex-wrap justify-center gap-2 sm:gap-3 px-4"
           >
             {["Flutter", "Dart", "Angular", "TypeScript", "REST APIs"].map((tech, index) => (
               <motion.span
@@ -95,7 +95,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.9 + index * 0.1 }}
-                className="px-4 py-2 bg-secondary/50 border border-border/50 rounded-full text-sm text-muted-foreground font-mono"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-secondary/50 border border-border/50 rounded-full text-xs sm:text-sm text-muted-foreground font-mono"
               >
                 {tech}
               </motion.span>
