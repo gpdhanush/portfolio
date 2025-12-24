@@ -16,8 +16,8 @@ const Footer = () => {
           >
             <p className="text-muted-foreground text-sm">
               Built with{" "}
-              <Heart className="inline h-4 w-4 text-primary fill-primary" />{" "}
-              by Gnana Prakasam
+              <Heart className="inline h-4 w-4 text-primary fill-primary" /> by
+              Gnana Prakasam
             </p>
             <p className="text-muted-foreground text-xs mt-1">
               © {currentYear} All rights reserved.
@@ -31,7 +31,7 @@ const Footer = () => {
             className="flex items-center gap-4"
           >
             <a
-              href="https://github.com/gnanaprakasam"
+              href="https://github.com/gpdhanush"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
@@ -40,7 +40,7 @@ const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/gnanaprakasam"
+              href="https://www.linkedin.com/in/gnana-prakasam-arulanantha-raj-705aba14a/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
@@ -49,7 +49,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:gnanaprakasam@example.com"
+              href="mailto:agprakash406@gmail.com"
               className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
               aria-label="Email"
             >

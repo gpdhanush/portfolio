@@ -4,33 +4,35 @@ import { useRef } from "react";
 
 const skillCategories = [
   {
-    title: "Mobile Development",
+    title: "Languages",
     skills: [
-      { name: "Flutter", level: 95 },
       { name: "Dart", level: 95 },
-      { name: "Ionic", level: 75 },
-      { name: "Android Studio", level: 85 },
-      { name: "Xcode", level: 80 },
-    ],
-  },
-  {
-    title: "Web Development",
-    skills: [
-      { name: "Angular", level: 90 },
-      { name: "TypeScript", level: 90 },
+      { name: "TypeScript", level: 92 },
       { name: "JavaScript", level: 92 },
       { name: "HTML/CSS", level: 95 },
-      { name: "REST APIs", level: 90 },
     ],
   },
   {
-    title: "Tools & Database",
+    title: "Frameworks & Libraries",
     skills: [
+      { name: "Flutter", level: 95 },
+      { name: "Angular", level: 90 },
+      { name: "Node.js", level: 85 },
+      { name: "Ionic", level: 80 },
+      { name: "Cordova", level: 80 },
+    ],
+  },
+  {
+    title: "Databases & Tools",
+    skills: [
+      { name: "MySQL", level: 85 },
+      { name: "MongoDB", level: 80 },
+      { name: "Firebase", level: 85 },
       { name: "Git", level: 90 },
-      { name: "MySQL", level: 80 },
       { name: "VS Code", level: 95 },
-      { name: "Firebase", level: 75 },
-      { name: "Postman", level: 85 },
+      { name: "Android Studio", level: 85 },
+      { name: "Xcode", level: 80 },
+      { name: "Postman", level: 90 },
     ],
   },
 ];
@@ -53,7 +55,7 @@ const SkillsSection = () => {
             Technical Expertise
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A comprehensive skill set developed over 5.5+ years of building production-grade applications.
+            Comprehensive skill set spanning mobile development, web technologies, and full-stack solutions developed over 8+ years of building production-grade applications.
           </p>
         </motion.div>
 

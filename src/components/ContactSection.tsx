@@ -46,8 +46,9 @@ const ContactSection = () => {
             Let's Work Together
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            I'm currently available for freelance projects and full-time opportunities. 
-            Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            I'm currently available for freelance projects and full-time
+            opportunities. Whether you have a question or just want to say hi,
+            I'll try my best to get back to you!
           </p>
         </motion.div>
 
@@ -62,15 +63,15 @@ const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Looking for a dedicated developer to bring your ideas to life? 
-                I specialize in building high-quality mobile and web applications 
+                Looking for a dedicated developer to bring your ideas to life? I
+                specialize in building high-quality mobile and web applications
                 that deliver real business value.
               </p>
             </div>
 
             <div className="space-y-4">
               <a
-                href="mailto:gnanaprakasam@example.com"
+                href="mailto:agprakash406@gmail.com"
                 className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/30 transition-all group"
               >
                 <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -78,13 +79,15 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium text-foreground">gnanaprakasam@example.com</p>
+                  <p className="font-medium text-foreground">
+                    agprakash406@gmail.com
+                  </p>
                 </div>
                 <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
               </a>
 
               <a
-                href="https://linkedin.com/in/gnanaprakasam"
+                href="https://www.linkedin.com/in/gnana-prakasam-arulanantha-raj-705aba14a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/30 transition-all group"
@@ -94,7 +97,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium text-foreground">linkedin.com/in/gnanaprakasam</p>
+                  <p className="font-medium text-foreground">
+                    linkedin.com/in/gnana-prakasam-arulanantha-raj-705aba14a
+                  </p>
                 </div>
                 <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
               </a>
@@ -105,7 +110,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium text-foreground">Available for Remote Work Worldwide</p>
+                  <p className="font-medium text-foreground">
+                    Available for Remote Work Worldwide
+                  </p>
                 </div>
               </div>
             </div>
@@ -117,10 +124,16 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-6 md:p-8 rounded-xl space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="glass-card p-6 md:p-8 rounded-xl space-y-6"
+            >
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="name"
+                    className="text-sm font-medium text-foreground"
+                  >
                     Name
                   </label>
                   <Input
@@ -132,7 +145,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-foreground"
+                  >
                     Email
                   </label>
                   <Input
@@ -147,7 +163,10 @@ const ContactSection = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium text-foreground">
+                <label
+                  htmlFor="subject"
+                  className="text-sm font-medium text-foreground"
+                >
                   Subject
                 </label>
                 <Input
@@ -160,7 +179,10 @@ const ContactSection = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-foreground">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-foreground"
+                >
                   Message
                 </label>
                 <Textarea

@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Smartphone, Globe, Users } from "lucide-react";
+import { Code2, Smartphone, Globe, Users, Download } from "lucide-react";
 
 const highlights = [
   {
     icon: Smartphone,
-    label: "Mobile Apps",
-    value: "20+",
-    description: "Flutter applications built",
+    label: "Apps Launched",
+    value: "10+",
+    description: "Android & iOS apps",
   },
   {
     icon: Globe,
-    label: "Web Apps",
-    value: "15+",
-    description: "Angular projects delivered",
+    label: "Downloads",
+    value: "50K+",
+    description: "Total across all apps",
   },
   {
     icon: Code2,
     label: "Experience",
-    value: "5.5+",
+    value: "8+",
     description: "Years in development",
   },
   {
@@ -58,24 +58,24 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate Senior Software Developer with over 5.5 years of experience 
-              crafting high-quality mobile and web applications. My expertise lies in 
-              <span className="text-foreground font-medium"> Flutter, Angular, and modern JavaScript</span> 
-              {" "}ecosystems.
+              I'm an experienced Full Stack Developer with 8+ years of expertise in building 
+              high-performance, cross-platform mobile and web applications. My proficiency spans 
+              <span className="text-foreground font-medium"> Flutter, Dart, Angular, TypeScript, Node.js, and MySQL</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I specialize in building scalable, performant applications with clean architecture. 
-              From concept to deployment, I handle the complete development lifecycle including 
-              <span className="text-foreground font-medium"> API integration, offline support, 
-              and app store deployments</span>.
+              I've successfully launched 10+ apps on Android and iOS platforms, with a combined 
+              total of 50K+ downloads. Specialized in scalable architecture design, RESTful API 
+              integration, and domain-driven UI/UX development focused on delivering 
+              <span className="text-foreground font-medium"> user-centric, maintainable, and innovative solutions</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond development, I've trained and mentored 50+ students and professionals, 
-              sharing knowledge in frontend technologies and guiding them through real-world projects.
+              Currently a Senior Software Developer at Naetha Technologies, I combine deep technical 
+              expertise with proven leadership, having trained and mentored 50+ students and professionals 
+              in mobile and web development while delivering enterprise-grade applications.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">
-              {["Problem Solver", "Team Player", "Detail Oriented", "Fast Learner"].map((trait) => (
+              {["Cross-Platform Expert", "API Architect", "Performance Optimizer", "Domain Designer"].map((trait) => (
                 <span
                   key={trait}
                   className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
