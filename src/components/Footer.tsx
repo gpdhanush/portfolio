@@ -50,6 +50,8 @@ const Footer = () => {
             </a>
             <a
               href="mailto:agprakash406@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
               aria-label="Email"
             >

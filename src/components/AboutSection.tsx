@@ -43,7 +43,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-mono text-sm">01. About Me</span>
+          {/* <span className="text-primary font-mono text-sm">01. About Me</span> */}
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Building Digital Experiences
           </h2>
@@ -58,20 +58,19 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm an experienced Full Stack Developer with 8+ years of expertise in building 
-              high-performance, cross-platform mobile and web applications. My proficiency spans 
-              <span className="text-foreground font-medium"> Flutter, Dart, Angular, TypeScript, Node.js, and MySQL</span>.
+              I am a <span className="text-foreground font-medium">Senior Flutter and Full-Stack Developer</span> with 8+ years of 
+              experience delivering scalable mobile and web applications. My expertise lies in building high-performance 
+              solutions using <span className="text-foreground font-medium">Flutter, Angular, Node.js, and RESTful APIs</span>.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I've successfully launched 10+ apps on Android and iOS platforms, with a combined 
-              total of 50K+ downloads. Specialized in scalable architecture design, RESTful API 
-              integration, and domain-driven UI/UX development focused on delivering 
-              <span className="text-foreground font-medium"> user-centric, maintainable, and innovative solutions</span>.
+              I have a proven track record of success, having built 10+ production apps across <span className="text-foreground font-medium">Android, iOS, and Web</span>, 
+              achieving over 50K+ cumulative downloads. My work focuses on performance optimization, maintainability, 
+              and business-driven engineering.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently a Senior Software Developer at Naetha Technologies, I combine deep technical 
-              expertise with proven leadership, having trained and mentored 50+ students and professionals 
-              in mobile and web development while delivering enterprise-grade applications.
+              Currently serving as a <span className="text-foreground font-medium">Senior Software Developer at Naetha Technologies</span>, 
+              I lead development for enterprise clients, mentor teams, and ensure the delivery of robust, 
+              cross-platform digital experiences.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">

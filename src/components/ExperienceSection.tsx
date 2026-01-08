@@ -10,24 +10,25 @@ const experiences = [
     period: "Jul 2025 – Present",
     location: "Chennai",
     description: [
-      "Leading development of scalable mobile and web applications",
-      "Architecting and implementing cross-platform solutions",
-      "Mentoring junior developers and guiding technical decisions",
+      "Leading development of cross-platform mobile and web applications using Flutter and Angular for enterprise clients.",
+      "Designed scalable UI and application architecture, reducing future feature development time by ~30%.",
+      "Integrated secure RESTful APIs and improved data handling reliability by 25%.",
+      "Collaborating with product owners and stakeholders to deliver features aligned with business goals and timelines.",
     ],
-    technologies: ["Flutter", "Angular", "Node.js", "TypeScript", "REST APIs"],
+    technologies: ["Flutter", "Angular", "RESTful APIs", "Architecture"],
   },
   {
     title: "Flutter Developer",
     company: "NRD TECH",
-    period: "Feb 2025 - Jun 2025",
+    period: "Feb 2025 - Jul 2025",
     location: "Coimbatore",
     description: [
-      "Developed SMRT mobile application for meter reading across Android and iOS platforms",
-      "Delivered two key modules: one live in Play Store and App Store; second in internal testing",
-      "Enabled domain-based white-labeling, allowing one app to serve multiple companies",
-      "Enhanced UI/UX across modules with performance and scalability optimizations",
+      "Developed the SMRT mobile application for meter reading on Android and iOS, serving 1,000+ field users.",
+      "Delivered 2 major modules within schedule; 1 module successfully published to Play Store and App Store, with the second released to internal testing.",
+      "Implemented domain-based white-label architecture, enabling a single app to support multiple client companies and reducing new client onboarding effort by 40%.",
+      "Optimized UI rendering and API calls, improving app performance and screen load times by ~35%.",
     ],
-    technologies: ["Flutter", "Dart", "Android", "iOS", "Firebase"],
+    technologies: ["Flutter", "Android", "iOS", "White-label"],
   },
   {
     title: "Senior Software Developer",
@@ -35,14 +36,14 @@ const experiences = [
     period: "Nov 2018 – Feb 2025",
     location: "Chennai",
     description: [
-      "Developed and published 10+ hybrid mobile applications to Play Store and App Store using Flutter, Ionic, and Angular",
-      "Built UI screens using HTML, CSS, and Angular 2+ for dynamic and responsive user interfaces",
-      "Structured Single Page Applications (SPAs) ensuring maintainability and high modularity",
-      "Collaborated with back-end developers to integrate and consume RESTful APIs effectively",
-      "Created release builds, deployed to production servers, and published updates on both Android and Apple platforms",
-      "Delivered system upgrades improving stability and user satisfaction",
+      "Developed and released 7+ production mobile and web applications using Flutter, Ionic, Angular, & Cordova.",
+      "Built reusable UI components and modular SPAs, reducing duplicated code by ~45% across projects.",
+      "Integrated RESTful APIs and backend services, improving data synchronization reliability by 30%.",
+      "Managed end-to-end release cycles including build generation, production deployment, and app store submissions for Android and iOS.",
+      "Delivered performance and stability enhancements that reduced crash rates by ~40% and increased user satisfaction scores.",
+      "Collaborated with cross-functional teams to meet 100% of committed delivery timelines across multiple client projects.",
     ],
-    technologies: ["Flutter", "Ionic", "Angular", "Cordova", "Node.js", "MySQL"],
+    technologies: ["Flutter", "Ionic", "Angular", "Cordova", "Node.js"],
   },
   {
     title: "Trainee",
@@ -50,12 +51,11 @@ const experiences = [
     period: "Jun 2016 – Oct 2018",
     location: "Dindigul",
     description: [
-      "Conducted training in web technologies (HTML, CSS, JS, PHP, MySQL)",
-      "Created training manuals and conducted hands-on workshops",
-      "Provided technical support and mentored students on real-world projects",
-      "Achieved high placement rate for trained professionals",
+      "Conducted training sessions on HTML, CSS, JavaScript, PHP, and MySQL for 100+ students and junior developers.",
+      "Created technical documentation and training manuals, reducing onboarding time by ~50%.",
+      "Provided hands-on project support and troubleshooting, achieving a 90% training completion success rate.",
     ],
-    technologies: ["JavaScript", "HTML/CSS", "PHP", "MySQL", "Bootstrap"],
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
   },
 ];
 
@@ -72,7 +72,7 @@ const ExperienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-mono text-sm">03. Experience</span>
+          {/* <span className="text-primary font-mono text-sm">03. Experience</span> */}
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Where I've Worked
           </h2>

@@ -6,6 +6,36 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "Naethra EMP",
+    subtitle: "Internal Employee Management System",
+    description:
+      "A comprehensive project and employee management dashboard with granular role-based access control. Features include task & bug tracking, device management, ticketing system, and holiday planning. Designed for internal operational efficiency.",
+    image: "/placeholder.svg",
+    technologies: ["React", "Vite", "Node.js", "MySQL", "RBAC"],
+    highlights: [
+      "7 Roles (Super Admin to Tester)",
+      "Full Project Lifecycle Management",
+      "Asset & Device Tracking",
+      "Ticket Raising System",
+    ],
+    type: "web",
+  },
+  {
+    title: "HNC - News APP",
+    subtitle: "Real-time News Platform",
+    description:
+      "An Android-exclusive news application built with Flutter, powered by a WordPress backend. Leverages WordPress REST APIs and custom hooks to trigger FCM push notifications, keeping users updated with the latest news instantly.",
+    image: "/placeholder.svg",
+    technologies: ["Flutter", "WordPress REST API", "firebase(FCM)", "Android"],
+    highlights: [
+      "WordPress DB Integration",
+      "Automated FCM Notifications",
+      "Deep Linking to Posts",
+      "Admin Content Management",
+    ],
+    type: "mobile",
+  },
+  {
     title: "driEV",
     subtitle: "EV Charging Platform",
     description:
@@ -80,7 +110,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-mono text-sm">04. Projects</span>
+          {/* <span className="text-primary font-mono text-sm">04. Projects</span> */}
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Featured Work
           </h2>
@@ -141,12 +171,12 @@ const ProjectsSection = () => {
               </div>
 
               {/* Technologies */}
-              <div className="p-6 pt-4 border-t border-border/50">
-                <div className="flex flex-wrap gap-2">
+              <div className="p-6 pt-4 border-t border-border/50 ">
+                <div className="flex flex-wrap gap-2 ">
                   {project.technologies.map((tech) => (
-                    <span
+                    <span 
                       key={tech}
-                      className="px-3 py-1 bg-secondary/50 text-foreground text-xs font-mono rounded-full"
+                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full"
                     >
                       {tech}
                     </span>

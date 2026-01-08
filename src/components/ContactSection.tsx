@@ -1,33 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { Mail, Linkedin, MapPin, Send, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { useRef } from "react";
+import { Mail, Linkedin, MapPin, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-  };
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden">
@@ -41,7 +19,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-mono text-sm">05. Contact</span>
+          {/* <span className="text-primary font-mono text-sm">05. Contact</span> */}
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             Let's Work Together
           </h2>
@@ -52,166 +30,70 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-3xl mx-auto">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8"
           >
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Looking for a dedicated developer to bring your ideas to life? I
                 specialize in building high-quality mobile and web applications
                 that deliver real business value.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-3 gap-6">
               <a
                 href="mailto:agprakash406@gmail.com"
-                className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/30 transition-all group"
+                className="flex flex-col items-center text-center p-6 glass-card rounded-xl hover:border-primary/30 transition-all group"
               >
-                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <Mail className="h-5 w-5 text-primary" />
+                <div className="p-4 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium text-foreground">
+                  <p className="text-sm text-muted-foreground mb-1">Email</p>
+                  <p className="font-medium text-foreground text-sm break-all">
                     agprakash406@gmail.com
                   </p>
                 </div>
-                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 mt-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
               </a>
 
               <a
                 href="https://www.linkedin.com/in/gnana-prakasam-arulanantha-raj-705aba14a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/30 transition-all group"
+                className="flex flex-col items-center text-center p-6 glass-card rounded-xl hover:border-primary/30 transition-all group"
               >
-                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
+                <div className="p-4 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Linkedin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium text-foreground">
-                    linkedin.com/in/gnana-prakasam-arulanantha-raj-705aba14a
+                  <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                  <p className="font-medium text-foreground text-sm">
+                    View Profile
                   </p>
                 </div>
-                <ArrowRight className="h-4 w-4 ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 mt-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
               </a>
 
-              <div className="flex items-center gap-4 p-4 glass-card rounded-xl">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <div className="flex flex-col items-center text-center p-6 glass-card rounded-xl">
+                <div className="p-4 bg-primary/10 rounded-full mb-4">
+                  <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium text-foreground">
-                    Available for Remote Work Worldwide
+                  <p className="text-sm text-muted-foreground mb-1">Location</p>
+                  <p className="font-medium text-foreground text-sm">
+                    Remote / Worldwide
                   </p>
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <form
-              onSubmit={handleSubmit}
-              className="glass-card p-6 md:p-8 rounded-xl space-y-6"
-            >
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                    className="bg-muted/50 border-border/50 focus:border-primary"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    required
-                    className="bg-muted/50 border-border/50 focus:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="subject"
-                  className="text-sm font-medium text-foreground"
-                >
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  placeholder="How can I help you?"
-                  required
-                  className="bg-muted/50 border-border/50 focus:border-primary"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="text-sm font-medium text-foreground"
-                >
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  required
-                  className="bg-muted/50 border-border/50 focus:border-primary resize-none"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                variant="hero"
-                size="lg"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  "Sending..."
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </form>
           </motion.div>
         </div>
       </div>

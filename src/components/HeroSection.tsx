@@ -20,34 +20,40 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center"
         >
-          {/* Profile Image with Animation */}
+          {/* Profile Image with Modern Design */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="flex justify-center mb-8"
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 100,
+              delay: 0.1
+            }}
+            className="flex justify-center mb-10"
           >
-            <motion.div
-              animate={{ 
-                y: [0, -8, 0],
-              }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="relative"
-            >
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 p-1 overflow-hidden">
-                <img 
-                  src="/GP.jpg" 
-                  alt="Gnana Prakasam" 
-                  className="w-full h-full rounded-full object-cover"
-                />
+            <div className="relative group">
+              {/* Animated Glow Background */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/50 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-500 animate-pulse" />
+              
+              {/* Main Image Container */}
+              <div className="relative w-45  h-45 md:w-40 md:h-40 rounded-full p-1 bg-background ring-4 ring-background/50">
+                <div className="w-full h-full rounded-full overflow-hidden border-2 border-background relative z-10">
+                  <img 
+                    src="/GP.jpg" 
+                    alt="Gnana Prakasam" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
-              <motion.div
+
+              {/* Rotating Decorative Ring */}
+              <motion.div 
                 animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border border-primary/20"
-                style={{ borderRadius: "50%" }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -inset-3 border border-dashed border-primary/30 rounded-full"
               />
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Greeting */}
@@ -89,7 +95,7 @@ const HeroSection = () => {
           >
             <span className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-primary" />
-              Chennai, Tamil Nadu
+              Dindigul, Tamil Nadu
             </span>
             <span className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
@@ -108,7 +114,7 @@ const HeroSection = () => {
             transition={{ delay: 1.0 }}
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient mb-6 px-4"
           >
-            Full Stack Developer
+            Senior Full Stack Developer / Flutter Developer
           </motion.h2>
 
           {/* Description */}
@@ -116,10 +122,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
-            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-4"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-10 px-4"
           >
-            8+ years of experience building high-performance, cross-platform mobile and web applications. 
-            Proficient in Flutter, Angular, Node.js, Dart, TypeScript, and MySQL with 10+ apps launched totaling 50K+ downloads.
+            Senior Flutter and Full-Stack Developer with 8+ years of experience delivering scalable mobile and
+            web applications. Proven success in building 10+ production apps across Android, iOS, and Web,
+            achieving 50K+ cumulative downloads. Expert in Flutter, Angular, Node.js, and RESTful APIs, with a
+            strong focus on performance optimization, maintainability, and business-driven engineering.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -130,7 +138,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
           >
             <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
-              <a href="/resume.pdf" download>
+              <a href="/Gnana Prakasam_Resume.pdf" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
               </a>
@@ -157,7 +165,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.3 + index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
-                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-secondary/50 border border-border/50 rounded-full text-xs sm:text-sm text-muted-foreground font-mono hover:border-primary/50 transition-colors cursor-pointer"
+                className="px-3 sm:px-4 py-1.5 sm:py-2  border border-border/50 rounded-full text-xs sm:text-sm text-primary text-sm bg-primary/10 hover:border-primary/50 transition-colors cursor-pointer"
               >
                 {tech}
               </motion.span>
